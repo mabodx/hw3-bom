@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>deiis_types</name>
+  <description/>
+  <version>1.0</version>
+  <vendor/>
+  <types>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.Annotation</name>
+      <description>This kind of type is a base type in the system. The two features this type has are casProcessorId and confidence. The other type will be the extended class of this one. Each annotation need a confidence score, so this will provide confidence score for each annotation. casProcessorId is a string that we can get where the annotator is produced and provide information for annotator.</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>casProcessorId</name>
+          <description>The unique identifier of the CAS processor that added this annotation to the CAS</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>confidence</name>
+          <description>The confidence level assigned to the Annotation by the CAS processor that created it.</description>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.Token</name>
+      <description>This kind of type is the smallest type in the document. The system will annotate each&#13;token span in each question and answer (break on whitespace and punctuation).</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.NGram</name>
+      <description>This is a kind of type that use N token to form a Gram to calculate the score of the&#13;answer.</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>elements</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>edu.cmu.deiis.types.Annotation</elementType>
+        </featureDescription>
+        <featureDescription>
+          <name>elementType</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.Answer</name>
+      <description>This kind of type is to show a instance of one answer. Also, it answer whether this kind of answer is correct answer or just a wrong answer.</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>isCorrect</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>sentence</name>
+          <description/>
+          <rangeTypeName>edu.cmu.deiis.types.SentenceQA</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>elementNgram</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>edu.cmu.deiis.types.NGram</elementType>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.Question</name>
+      <description>This kind of type is annotating the question in document so that we can get the&#13;question from the document.</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+    <features>
+        <featureDescription>
+          <name>sentence</name>
+          <description/>
+          <rangeTypeName>edu.cmu.deiis.types.SentenceQA</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>elementNgram</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>edu.cmu.deiis.types.NGram</elementType>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.AnswerScore</name>
+      <description>This kind of type is give the calculating score of each answer. I use the three way to calculate the score, there are gold pipeline, token overlap pipeline, Ngram overlap pipeline.</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>score</name>
+          <description/>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>answer</name>
+          <description/>
+          <rangeTypeName>edu.cmu.deiis.types.Answer</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  <typeDescription>
+      <name>edu.cmu.deiis.types.SentenceQA</name>
+      <description>This type contain the sentence in the question and answer, and it is used to make it&#13;easy to tokenize the question and answer.</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>element</name>
+          <description>tokenize question and answer</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>edu.cmu.deiis.types.Token</elementType>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

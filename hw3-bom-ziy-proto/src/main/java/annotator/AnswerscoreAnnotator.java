@@ -11,6 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.examples.RunAE;
 import org.apache.uima.jcas.JCas;
+import org.cleartk.ne.type.NamedEntityMention;
 
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.NGram;
@@ -49,7 +50,43 @@ this formula ÒquestionN-Grams found / total ansewr N-Grams (for 1-, 2- and 3-gra
 				nowa = (Answer) ita.next();
 				AnswerScore ann = new AnswerScore(aJCas);
 //				System.out.println("j--: "+j++);
-				double score = NGramscore(nowq.getElementNgram(), nowa.getElementNgram());
+				FSArray Ngramq = nowq.getElementNgram();
+				FSArray Ngrama = nowa.getElementNgram();
+				double score=0;
+//				System.out.println(Ngrama.size());
+				for ( i = 0; i < Ngramq.size(); i++) {
+					NGram  qGram = (NGram)Ngramq.get(i);
+					String qString = qGram.getCoveredText();
+					for ( j = 0; j < Ngrama.size(); j++) {
+						NGram aGram = (NGram)Ngrama.get(j);
+						String aString = aGram.getCoveredText();
+						if(aString.equals(qString))
+						{
+							score =score +1;
+							break;
+						}
+					}
+				}
+				
+				int cntentity = 0;
+				FSIndex neIndex = aJCas.getAnnotationIndex(NamedEntityMention.type);
+				Iterator neIterator = neIndex.iterator();
+				while (neIterator.hasNext()) {
+					NamedEntityMention nem = (NamedEntityMention) neIterator.next();
+					if (nem.getBegin() >= nowa.getBegin() && nem.getEnd() <= nowa.getEnd()) {
+						if (nowq.getCoveredText().indexOf(nem.getCoveredText()) >= 0) {
+							score++;
+							cntentity++;
+						}
+					}
+				}
+
+				
+				
+				score = score/(Ngrama.size()+ cntentity);
+				
+				
+				
 //				System.out.println("j--: "+j++);
 				ann.setBegin(nowa.getBegin());
 				ann.setEnd(nowa.getEnd());
@@ -68,6 +105,9 @@ this formula ÒquestionN-Grams found / total ansewr N-Grams (for 1-, 2- and 3-gra
 	}
 	
 	public double NGramscore(FSArray Ngramq,FSArray Ngrama) {
+	
+
+		
 		double score=0;
 //		System.out.println(Ngrama.size());
 		for (int i = 0; i < Ngramq.size(); i++) {

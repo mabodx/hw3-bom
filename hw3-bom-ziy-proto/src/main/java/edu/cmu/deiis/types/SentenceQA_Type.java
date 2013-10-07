@@ -12,8 +12,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** 
- * Updated by JCasGen Mon Sep 23 23:11:57 EDT 2013
+/** This type contain the sentence in the question and answer, and it is used to make iteasy to tokenize the question and answer.
+ * Updated by JCasGen Sun Oct 06 22:58:20 EDT 2013
  * @generated */
 public class SentenceQA_Type extends Annotation_Type {
   /** @generated */
@@ -79,43 +79,6 @@ public class SentenceQA_Type extends Annotation_Type {
     ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_element), i, v);
   }
  
- 
-  /** @generated */
-  final Feature casFeat_elementNgram;
-  /** @generated */
-  final int     casFeatCode_elementNgram;
-  /** @generated */ 
-  public int getElementNgram(int addr) {
-        if (featOkTst && casFeat_elementNgram == null)
-      jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_elementNgram);
-  }
-  /** @generated */    
-  public void setElementNgram(int addr, int v) {
-        if (featOkTst && casFeat_elementNgram == null)
-      jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    ll_cas.ll_setRefValue(addr, casFeatCode_elementNgram, v);}
-    
-   /** @generated */
-  public int getElementNgram(int addr, int i) {
-        if (featOkTst && casFeat_elementNgram == null)
-      jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    if (lowLevelTypeChecks)
-      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elementNgram), i, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_elementNgram), i);
-  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elementNgram), i);
-  }
-   
-  /** @generated */ 
-  public void setElementNgram(int addr, int i, int v) {
-        if (featOkTst && casFeat_elementNgram == null)
-      jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    if (lowLevelTypeChecks)
-      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elementNgram), i, v, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_elementNgram), i);
-    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elementNgram), i, v);
-  }
- 
 
 
 
@@ -128,10 +91,6 @@ public class SentenceQA_Type extends Annotation_Type {
  
     casFeat_element = jcas.getRequiredFeatureDE(casType, "element", "uima.cas.FSArray", featOkTst);
     casFeatCode_element  = (null == casFeat_element) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_element).getCode();
-
- 
-    casFeat_elementNgram = jcas.getRequiredFeatureDE(casType, "elementNgram", "uima.cas.FSArray", featOkTst);
-    casFeatCode_elementNgram  = (null == casFeat_elementNgram) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elementNgram).getCode();
 
   }
 }

@@ -12,9 +12,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.cas.FSArray;
 
 
-/** 
- * Updated by JCasGen Mon Sep 23 23:11:57 EDT 2013
- * XML source: /Users/mabodx/git/hw2-bom/hw2-bom/src/main/resources/hw2-bom-aee.xml
+/** This kind of type is annotating the question in document so that we can get thequestion from the document.
+ * Updated by JCasGen Sun Oct 06 22:58:20 EDT 2013
+ * XML source: /Users/mabodx/git/hw3-bom/hw3-bom-ziy-proto/src/main/resources/descriptors/StanfordCoreNLPDescriptor.xml
  * @generated */
 public class Question extends Annotation {
   /** @generated

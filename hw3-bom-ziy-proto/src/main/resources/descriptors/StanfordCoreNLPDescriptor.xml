@@ -2,9 +2,9 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>annotator.GoldAnswerScore</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>org.cleartk.stanford.StanfordCoreNLPAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>GoldAnswerscoreDescriptor</name>
+    <name>StanfordCoreNLPDescriptor</name>
     <description/>
     <version>1.0</version>
     <vendor/>
@@ -12,7 +12,8 @@
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
-        <import location="deiis_types.xml"/>
+        <import name="org.cleartk.ne.type.NamedEntity"/>
+        <import name="descriptors.deiis_types"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>
@@ -20,14 +21,14 @@
     <capabilities>
       <capability>
         <inputs>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.SentenceQA</type>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+          <type allAnnotatorFeatures="true">uima.tcas.DocumentAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.cas.AnnotationBase</type>
+          <type allAnnotatorFeatures="true">uima.tcas.Annotation</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Annotation</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+          <type allAnnotatorFeatures="true">org.cleartk.ne.type.NamedEntityMention</type>
+          <type allAnnotatorFeatures="true">org.cleartk.ne.type.NamedEntity</type>
         </outputs>
         <languagesSupported/>
       </capability>

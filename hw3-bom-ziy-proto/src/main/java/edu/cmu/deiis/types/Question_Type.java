@@ -13,8 +13,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** 
- * Updated by JCasGen Mon Sep 23 23:11:57 EDT 2013
+/** This kind of type is annotating the question in document so that we can get thequestion from the document.
+ * Updated by JCasGen Sun Oct 06 22:58:20 EDT 2013
  * @generated */
 public class Question_Type extends Annotation_Type {
   /** @generated */

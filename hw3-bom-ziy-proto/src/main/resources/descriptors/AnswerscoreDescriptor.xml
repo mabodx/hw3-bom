@@ -13,7 +13,7 @@ this formula “questionN-Grams found / total ansewr N-Grams (for 1-, 2- and 3-g
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
-        <import name="descriptors.deiis_types"/>
+        <import location="deiis_types.xml"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

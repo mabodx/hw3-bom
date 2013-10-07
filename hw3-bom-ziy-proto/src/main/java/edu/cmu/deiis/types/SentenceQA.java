@@ -10,9 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.cas.FSArray;
 
 
-/** 
- * Updated by JCasGen Mon Sep 23 23:11:57 EDT 2013
- * XML source: /Users/mabodx/git/hw2-bom/hw2-bom/src/main/resources/hw2-bom-aee.xml
+/** This type contain the sentence in the question and answer, and it is used to make iteasy to tokenize the question and answer.
+ * Updated by JCasGen Sun Oct 06 22:58:20 EDT 2013
+ * XML source: /Users/mabodx/git/hw3-bom/hw3-bom-ziy-proto/src/main/resources/descriptors/StanfordCoreNLPDescriptor.xml
  * @generated */
 public class SentenceQA extends Annotation {
   /** @generated
@@ -94,40 +94,6 @@ public class SentenceQA extends Annotation {
       jcasType.jcas.throwFeatMissing("element", "edu.cmu.deiis.types.SentenceQA");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_element), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_element), i, jcasType.ll_cas.ll_getFSRef(v));}
-   
-    
-  //*--------------*
-  //* Feature: elementNgram
-
-  /** getter for elementNgram - gets 
-   * @generated */
-  public FSArray getElementNgram() {
-    if (SentenceQA_Type.featOkTst && ((SentenceQA_Type)jcasType).casFeat_elementNgram == null)
-      jcasType.jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_elementNgram)));}
-    
-  /** setter for elementNgram - sets  
-   * @generated */
-  public void setElementNgram(FSArray v) {
-    if (SentenceQA_Type.featOkTst && ((SentenceQA_Type)jcasType).casFeat_elementNgram == null)
-      jcasType.jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    jcasType.ll_cas.ll_setRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_elementNgram, jcasType.ll_cas.ll_getFSRef(v));}    
-    
-  /** indexed getter for elementNgram - gets an indexed value - 
-   * @generated */
-  public NGram getElementNgram(int i) {
-    if (SentenceQA_Type.featOkTst && ((SentenceQA_Type)jcasType).casFeat_elementNgram == null)
-      jcasType.jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_elementNgram), i);
-    return (NGram)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_elementNgram), i)));}
-
-  /** indexed setter for elementNgram - sets an indexed value - 
-   * @generated */
-  public void setElementNgram(int i, NGram v) { 
-    if (SentenceQA_Type.featOkTst && ((SentenceQA_Type)jcasType).casFeat_elementNgram == null)
-      jcasType.jcas.throwFeatMissing("elementNgram", "edu.cmu.deiis.types.SentenceQA");
-    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_elementNgram), i);
-    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((SentenceQA_Type)jcasType).casFeatCode_elementNgram), i, jcasType.ll_cas.ll_getFSRef(v));}
   }
 
     

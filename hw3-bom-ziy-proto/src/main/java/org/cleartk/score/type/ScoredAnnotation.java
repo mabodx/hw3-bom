@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:38:30 EDT 2013
- * XML source: /Users/mabodx/git/hw3-bom/hw3-bom-ziy-proto/src/main/resources/hw2-bom-aae.xml
+ * Updated by JCasGen Mon Oct 07 15:24:17 EDT 2013
+ * XML source: /Users/mabodx/git/hw3-bom/hw3-bom-ziy-proto/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class ScoredAnnotation extends Annotation {
   /** @generated

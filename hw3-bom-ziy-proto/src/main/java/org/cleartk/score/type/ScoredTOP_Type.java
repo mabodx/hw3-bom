@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:38:30 EDT 2013
+ * Updated by JCasGen Mon Oct 07 15:24:18 EDT 2013
  * @generated */
 public class ScoredTOP_Type extends TOP_Type {
   /** @generated */

@@ -30,6 +30,18 @@
       <name>edu.cmu.deiis.types.Token</name>
       <description>This kind of type is the smallest type in the document. The system will annotate each&#13;token span in each question and answer (break on whitespace and punctuation).</description>
       <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+    <features>
+        <featureDescription>
+          <name>PosTag</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>featureLemma</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
     </typeDescription>
     <typeDescription>
       <name>edu.cmu.deiis.types.NGram</name>

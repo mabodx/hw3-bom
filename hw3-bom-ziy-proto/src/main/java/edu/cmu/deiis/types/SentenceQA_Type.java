@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** This type contain the sentence in the question and answer, and it is used to make iteasy to tokenize the question and answer.
- * Updated by JCasGen Mon Oct 07 00:38:30 EDT 2013
+ * Updated by JCasGen Mon Oct 07 15:24:17 EDT 2013
  * @generated */
 public class SentenceQA_Type extends Annotation_Type {
   /** @generated */

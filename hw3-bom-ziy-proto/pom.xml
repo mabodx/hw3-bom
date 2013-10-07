@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.cmu.lti.11791.f13.hw2</groupId>
-	<artifactId>hw2-bom</artifactId>
+	<groupId>edu.cmu.lti.11791.f13.hw3</groupId>
+	<artifactId>hw3-bom</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
 	<repositories>
 		<repository>
@@ -41,7 +41,7 @@
 							<goal>perform</goal>
 						</goals>
 						<configuration>
-							<pomFileName>hw2-bom/pom.xml</pomFileName>
+							<pomFileName>hw3-bom-ziy-proto/pom.xml</pomFileName>
 						</configuration>
 					</execution>
 				</executions>
@@ -97,7 +97,7 @@
 		</dependency>
 	</dependencies>
 	<scm>
-		<connection>scm:git:git@github.com:mabodx/hw2-bom.git</connection>
-		<developerConnection>scm:git:git@github.com:mabodx/hw2-bom.git</developerConnection>
+		<connection>scm:git:git@github.com:mabodx/hw3-bom.git</connection>
+		<developerConnection>scm:git:git@github.com:mabodx/hw3-bom.git</developerConnection>
 	</scm>
 </project>

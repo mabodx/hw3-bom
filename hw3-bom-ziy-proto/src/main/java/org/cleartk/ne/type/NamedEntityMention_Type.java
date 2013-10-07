@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.cleartk.score.type.ScoredAnnotation_Type;
 
 /** 
- * Updated by JCasGen Sun Oct 06 22:58:20 EDT 2013
+ * Updated by JCasGen Mon Oct 07 00:38:30 EDT 2013
  * @generated */
 public class NamedEntityMention_Type extends ScoredAnnotation_Type {
   /** @generated */

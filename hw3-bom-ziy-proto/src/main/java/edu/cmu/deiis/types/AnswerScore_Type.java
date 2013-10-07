@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** This kind of type is give the calculating score of each answer. I use the three way to calculate the score, there are gold pipeline, token overlap pipeline, Ngram overlap pipeline.
- * Updated by JCasGen Sun Oct 06 22:58:20 EDT 2013
+ * Updated by JCasGen Mon Oct 07 00:38:30 EDT 2013
  * @generated */
 public class AnswerScore_Type extends Annotation_Type {
   /** @generated */

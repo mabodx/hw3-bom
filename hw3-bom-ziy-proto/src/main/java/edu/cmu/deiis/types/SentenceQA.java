@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.FSArray;
 
 
 /** This type contain the sentence in the question and answer, and it is used to make iteasy to tokenize the question and answer.
- * Updated by JCasGen Sun Oct 06 22:58:20 EDT 2013
- * XML source: /Users/mabodx/git/hw3-bom/hw3-bom-ziy-proto/src/main/resources/descriptors/StanfordCoreNLPDescriptor.xml
+ * Updated by JCasGen Mon Oct 07 00:38:30 EDT 2013
+ * XML source: /Users/mabodx/git/hw3-bom/hw3-bom-ziy-proto/src/main/resources/hw2-bom-aae.xml
  * @generated */
 public class SentenceQA extends Annotation {
   /** @generated

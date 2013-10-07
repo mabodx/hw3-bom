@@ -9,7 +9,7 @@
     <service>
       <inputQueue endpoint="myQueueName" brokerURL="tcp://localhost:61616" prefetch="0"/>
       <topDescriptor>
-<import location="hw2-bom-aae.xml"/>
+<import location="hw2-bom-aae-remote.xml"/>
       </topDescriptor>
       <analysisEngine async="false">
         <scaleout numberOfInstances="1"/>

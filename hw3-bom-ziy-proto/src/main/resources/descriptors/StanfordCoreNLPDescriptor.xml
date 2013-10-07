@@ -14,6 +14,7 @@
       <imports>
         <import name="org.cleartk.ne.type.NamedEntity"/>
         <import name="descriptors.deiis_types"/>
+        <import name="org.cleartk.TypeSystem"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>
